@@ -3,7 +3,8 @@
 
 ## What
 Friendly Palette Generator (FPG) is a tool that generates colors corresponsing to a grayscale palette
-![Screenshot](https://raw.githubusercontent.com/FelipeRT98/FriendlyPaletteGenerator/main/github/FPG-screenshot.png)
+
+![Screenshot](https://raw.githubusercontent.com/FelipeRT98/FriendlyPaletteGenerator/main/.github/FPG-screenshot.png)
 
 ## Why
 Colors that appear distinct to someone may appear to be the same to someone else
