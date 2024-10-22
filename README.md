@@ -1,5 +1,8 @@
 # Friendly Palette Generator
+
 ![License](https://img.shields.io/badge/License-GPLv3-blue.svg)
+
+![image](https://www.gnu.org/graphics/gplv3-with-text-136x68.png)
 
 ## What
 Friendly Palette Generator (FPG) is a tool that generates colors corresponsing to a grayscale palette
