@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FriendlyPaletteGenerator"
         mc:Ignorable="d"
-        Title="FriendlyPaletteGenerator"
+        Title="Friendly Palette Generator"
         Icon="pack://application:,,,/FPGicon.png"
         WindowStartupLocation="CenterScreen" Background="LightGray">
 
