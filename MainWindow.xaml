@@ -1,0 +1,123 @@
+﻿<Window x:Class="FriendlyPaletteGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FriendlyPaletteGenerator"
+        mc:Ignorable="d"
+        Title="FriendlyPaletteGenerator"
+        Icon="pack://application:,,,/FPGicon.png"
+        WindowStartupLocation="CenterScreen" Background="LightGray">
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <DockPanel x:Name="altBar" Grid.Row="0"
+                   Margin="0"
+                   LastChildFill="True"
+                   HorizontalAlignment="Stretch">
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="{Binding PaletteText}">
+                    <MenuItem x:Name="Save" Header="{Binding SaveText}">
+                        <MenuItem x:Name="S0" Header="_0" Click="AltMenu_Click" Background="Transparent"/>
+                        <MenuItem x:Name="S1" Header="_1" Click="AltMenu_Click" Background="Transparent"/>
+                        <MenuItem x:Name="S2" Header="_2" Click="AltMenu_Click" Background="Transparent"/>
+                        <MenuItem x:Name="S3" Header="_3" Click="AltMenu_Click" Background="Transparent"/>
+                        <MenuItem x:Name="S4" Header="_4" Click="AltMenu_Click" Background="Transparent"/>
+                        <MenuItem x:Name="S5" Header="_5" Click="AltMenu_Click" Background="Transparent"/>
+                        <MenuItem x:Name="S6" Header="_6" Click="AltMenu_Click" Background="Transparent"/>
+                        <MenuItem x:Name="S7" Header="_7" Click="AltMenu_Click" Background="Transparent"/>
+                        <MenuItem x:Name="S8" Header="_8" Click="AltMenu_Click" Background="Transparent"/>
+                        <MenuItem x:Name="S9" Header="_9" Click="AltMenu_Click" Background="Transparent"/>
+                    </MenuItem>
+                    <MenuItem x:Name="Load" Header="{Binding LoadText}">
+                        <MenuItem x:Name="L0" Header="_0" Click="AltMenu_Click" Background="Transparent" IsEnabled="False"/>
+                        <MenuItem x:Name="L1" Header="_1" Click="AltMenu_Click" Background="Transparent" IsEnabled="False"/>
+                        <MenuItem x:Name="L2" Header="_2" Click="AltMenu_Click" Background="Transparent" IsEnabled="False"/>
+                        <MenuItem x:Name="L3" Header="_3" Click="AltMenu_Click" Background="Transparent" IsEnabled="False"/>
+                        <MenuItem x:Name="L4" Header="_4" Click="AltMenu_Click" Background="Transparent" IsEnabled="False"/>
+                        <MenuItem x:Name="L5" Header="_5" Click="AltMenu_Click" Background="Transparent" IsEnabled="False"/>
+                        <MenuItem x:Name="L6" Header="_6" Click="AltMenu_Click" Background="Transparent" IsEnabled="False"/>
+                        <MenuItem x:Name="L7" Header="_7" Click="AltMenu_Click" Background="Transparent" IsEnabled="False"/>
+                        <MenuItem x:Name="L8" Header="_8" Click="AltMenu_Click" Background="Transparent" IsEnabled="False"/>
+                        <MenuItem x:Name="L9" Header="_9" Click="AltMenu_Click" Background="Transparent" IsEnabled="False"/>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem x:Name="Copy" Header="{Binding CopyText}">
+                    <MenuItem x:Name="Grays" Header="{Binding GraysText}" Click="AltMenu_Click"/>
+                    <MenuItem x:Name="Colors" Header="{Binding ColorsText}" Click="AltMenu_Click"/>
+                    <MenuItem x:Name="All" Header="{Binding AllText}" Click="AltMenu_Click"/>
+                </MenuItem>
+                <MenuItem x:Name="About" Header="{Binding AboutText}" Click="About_Click"/>
+                <MenuItem Header="{Binding LanguageText}">
+                    <MenuItem Header="En_glish" Click="SetLanguage_Click" Tag="en"/>
+                    <MenuItem Header="_Español" Click="SetLanguage_Click" Tag="es"/>
+                    <MenuItem Header="_Deutsch" Click="SetLanguage_Click" Tag="de"/>
+                    <MenuItem Header="_Português" Click="SetLanguage_Click" Tag="pt"/>
+                    <MenuItem Header="_Français" Click="SetLanguage_Click" Tag="fr"/>
+                    <MenuItem Header="_Italiano" Click="SetLanguage_Click" Tag="it"/>
+                    <MenuItem Header="日本語" Click="SetLanguage_Click" Tag="ja"/>
+                    <MenuItem Header="한국어" Click="SetLanguage_Click" Tag="ko"/>
+                    <MenuItem Header="中文" Click="SetLanguage_Click" Tag="zh"/>
+                    <MenuItem Header="हिन्दी" Click="SetLanguage_Click" Tag="hi"/>
+                    <MenuItem Header="Русский" Click="SetLanguage_Click" Tag="ru"/>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+
+        <Viewbox Grid.Row="1"
+                 Stretch="Uniform" VerticalAlignment="Top"
+                 Margin="0,10,0,10">
+            <Grid x:Name="content"
+                      ShowGridLines="False">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.5*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Button x:Name="copyAllGraysButton" Grid.Row="0" Grid.Column="1" Content="📋"
+                    HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Click="CopyAllGraysButton_Click"/>
+
+                <ComboBox x:Name="quantityDropdown"
+                    Grid.Row="0" Grid.Column="2"
+                          Grid.ColumnSpan="2"
+                    HorizontalAlignment="Center" VerticalAlignment="Center"
+                    KeyDown="QuantityDropdown_KeyDown"
+                    SelectionChanged="QuantityDropdown_SelectionChanged"/>
+
+                <Button x:Name="copyAllColorsButton" Grid.Row="0" Grid.Column="4" Content="📋"
+                    HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Click="CopyAllColorsButton_Click"/>
+
+                <ComboBox x:Name="colorModelDropdown"
+                Grid.Row="0" Grid.Column="5"
+                HorizontalAlignment="Center" VerticalAlignment="Center"
+                KeyDown="ColorModelDropdown_KeyDown"
+                SelectionChanged="ColorModelDropdown_SelectionChanged">
+                    <ComboBoxItem IsSelected="True">RGB</ComboBoxItem>
+                    <ComboBoxItem>HEX</ComboBoxItem>
+                    <ComboBoxItem>HSL</ComboBoxItem>
+                    <ComboBoxItem>HSV</ComboBoxItem>
+                    <ComboBoxItem>CMYK</ComboBoxItem>
+                </ComboBox>
+
+                <Button x:Name="resetAllColorsButton" Grid.Row="0" Grid.Column="6" Content="↺"
+                    HorizontalAlignment="Center" VerticalAlignment="Center"
+                    Click="ResetAllColorsButton_Click"/>
+            </Grid>
+        </Viewbox>
+    </Grid>
+</Window>
