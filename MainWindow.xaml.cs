@@ -601,7 +601,7 @@ namespace FriendlyPaletteGenerator
                 "\n" +
                 "==========" +
                 "\n" +
-                "https://wpf-tutorial.com/dialogs/the-messagebox/";
+                "https://github.com/FelipeRT98/FriendlyPaletteGenerator";
             string caption = "FPG";
             MessageBox.Show(messageBoxText, caption, MessageBoxButton.OK, MessageBoxImage.Information);
         }
