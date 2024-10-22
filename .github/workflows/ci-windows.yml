@@ -1,0 +1,77 @@
+name: .NET Build and Test on Windows
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build_x64:
+    runs-on: windows-latest
+    name: Build and Test for Windows x64
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build for Windows x64
+        run: dotnet build --configuration Release --runtime win-x64
+
+      - name: Publish single-file for Windows x64
+        run: dotnet publish -r win-x64 -p:PublishSingleFile=true --self-contained false
+
+      - name: Test execution
+        run: .\bin\Release\net8.0-windows\win-x64\publish\FriendlyPaletteGenerator.exe
+        shell: cmd
+
+  build_x86:
+    runs-on: windows-latest
+    name: Build and Test for Windows x86
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build for Windows x86
+        run: dotnet build --configuration Release --runtime win-x86
+
+      - name: Publish single-file for Windows x86
+        run: dotnet publish -r win-x86 -p:PublishSingleFile=true --self-contained false
+
+  build_arm:
+    runs-on: windows-latest
+    name: Build and Test for Windows ARM64
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Setup .NET SDK
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore
+
+      - name: Build for Windows ARM64
+        run: dotnet build --configuration Release --runtime win-arm64
+
+      - name: Publish single-file for Windows ARM64
+        run: dotnet publish -r win-arm64 -p:PublishSingleFile=true --self-contained false

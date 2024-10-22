@@ -47,6 +47,7 @@
 
   <ItemGroup>
     <None Include=".github\CONTRIBUTING.md" />
+    <None Include=".github\workflows\ci-windows.yml" />
   </ItemGroup>
 
 </Project>

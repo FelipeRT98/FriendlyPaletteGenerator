@@ -6,7 +6,6 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
-using Microsoft.Win32;
 using Path = System.IO.Path;
 
 namespace FriendlyPaletteGenerator
@@ -608,20 +607,8 @@ namespace FriendlyPaletteGenerator
         {
             if (!File.Exists(fullPath))
             {
-                Stream myStream;
-                SaveFileDialog saveFileDialog = new()
-                {
-                    Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*",
-                    FileName = fileName,
-                    DefaultDirectory = defaultDirectory
-                };
-                if (saveFileDialog.ShowDialog() == true)
-                {
-                    if ((myStream = saveFileDialog.OpenFile()) != null)
-                    {
-                        myStream.Close();
-                    }
-                }
+                FileStream myStream = new(fullPath, FileMode.Create, FileAccess.Write);
+                myStream.Close();
 
                 WriteIntoFile(slot, fullPath);
             }
