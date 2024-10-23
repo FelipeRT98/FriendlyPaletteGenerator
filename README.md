@@ -6,22 +6,22 @@
 ## What
 
 **Friendly Palette Generator (FPG)** is a tool that generates color palettes based on grayscale values.<br>
-It takes grayscale input (shades from black to white) and produces corresponding colors that match the input values.
+The colors produced match their grayscale equivalents, ensuring that different colors represent the same intensity when viewed in grayscale.
 
 | Regular       | Grayscale filter    |
 |---------------------|---------------------|
 | ![Regular](.github/FPG-screenshot.png) | ![Grayscale](.github/FPG-screenshot-grayscale.png) |
 
-### Features
-
-- **Save and Load Palettes**: Easily save your custom palettes and load them when needed.
-- **Copy Palette Values**: Copy generated palette values directly to your clipboard for quick use.
-- **Multilingual Support**: Available in multiple languages, including English, Español, Deutsch, Português, Français, Italiano, 日本語, 한국어, 中文, हिन्दी, and Русский.
-
 ## Why
 
 Colors that appear distinct to one person can be challenging to differentiate for individuals with color vision deficiencies or in specific visual conditions.<br>
 FPG's color palettes are designed to be distinguishable, making them accessible to a broader range of users.
+
+## Features
+
+- **Save and Load Palettes**: Easily save your custom palettes and load them when needed.
+- **Copy Palette Values**: Copy generated palette values directly to your clipboard for quick use.
+- **Multilingual Support**: Available in multiple languages, including English, Español, Deutsch, Português, Français, Italiano, 日本語, 한국어, 中文, हिन्दी, and Русский.
 
 ## Build
 
