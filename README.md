@@ -8,6 +8,10 @@
 **Friendly Palette Generator (FPG)** is a tool that generates color palettes based on grayscale values.<br>
 It takes grayscale input (shades from black to white) and produces corresponding colors that match the input values.
 
+| Regular       | Grayscale filter    |
+|---------------------|---------------------|
+| ![Regular](.github/FPG-screenshot.png) | ![Grayscale](.github/FPG-screenshot-grayscale.png) |
+
 ![Screenshot](.github/FPG-screenshot.png)
 
 ### Features
