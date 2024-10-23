@@ -19,8 +19,11 @@ FPG's color palettes are designed to be distinguishable, making them accessible 
 
 ## Features
 
-- **Save and Load Palettes**: Easily save your custom palettes and load them when needed.
-- **Copy Palette Values**: Copy generated palette values directly to your clipboard for quick use.
+- **Generate palettes with up to 20 Colors**: Create palettes with up to 20 distinct colors.
+- **Copy to clipboard**: Copy palette color values to your clipboard for quick integration into your projects.
+- **Save and Load**: Up to 10 custom palettes can be saved for future use.
+- **Support for popular color formats**: Save and view your palettes in RGB, HEX, HSL, HSV, and CMYK formats.
+- **Reset or Fine-Tune Colors**: Easily reset individual colors or the entire palette, allowing you to refine colors until you find the perfect combination.
 - **Multilingual Support**: Available in multiple languages, including English, Español, Deutsch, Português, Français, Italiano, 日本語, 한국어, 中文, हिन्दी, and Русский.
 
 ## Build
