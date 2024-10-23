@@ -586,22 +586,22 @@ namespace FriendlyPaletteGenerator
         {
             string messageBoxText =
                 "Copyright (C) 2024 Felipe R.T.\r\n\r\n" +
-                "This program is free software: you can redistribute it and/or modify\r\n" +
-                "it under the terms of the GNU General Public License as published by\r\n" +
+                "This program is free software: you can redistribute it and/or modify it\r\n" +
+                "under the terms of the GNU General Public License as published by\r\n" +
                 "the Free Software Foundation, either version 3 of the License, or\r\n" +
                 "(at your option) any later version.\r\n\r\n" +
                 "This program is distributed in the hope that it will be useful,\r\n" +
                 "but WITHOUT ANY WARRANTY; without even the implied warranty of\r\n" +
-                "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE." +
+                "MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\r\n" +
                 "See the GNU General Public License for more details.\r\n\r\n" +
-                "You should have received a copy of the GNU General Public License\r\n" +
-                "along with this program. If not, see <https://www.gnu.org/licenses/>." +
-                "\n" +
+                "You should have received a copy of the GNU General Public License along with this program. " +
+                "If not, see <https://www.gnu.org/licenses/>." +
+                "\r\n\r\n" +
                 "==========" +
-                "\n" +
+                "\r\n\r\n" +
                 "https://github.com/FelipeRT98/FriendlyPaletteGenerator";
             string caption = "FPG";
-            MessageBox.Show(messageBoxText, caption, MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show(messageBoxText, caption, MessageBoxButton.OK, MessageBoxImage.None);
         }
         private void SavePalette(int slot)
         {
