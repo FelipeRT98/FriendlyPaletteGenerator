@@ -12,8 +12,6 @@ It takes grayscale input (shades from black to white) and produces corresponding
 |---------------------|---------------------|
 | ![Regular](.github/FPG-screenshot.png) | ![Grayscale](.github/FPG-screenshot-grayscale.png) |
 
-![Screenshot](.github/FPG-screenshot.png)
-
 ### Features
 
 - **Save and Load Palettes**: Easily save your custom palettes and load them when needed.
